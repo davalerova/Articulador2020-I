@@ -11,3 +11,4 @@ from django.views import generic
 
 class Home( generic.TemplateView ):
     template_name = 'bases/home.html'
+    login_url='bases:login'

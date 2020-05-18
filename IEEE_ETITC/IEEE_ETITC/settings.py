@@ -57,7 +57,7 @@ ROOT_URLCONF = 'IEEE_ETITC.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +122,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join( BASE_DIR, 'media' )
+
+LOGIN_REDIRECT_URL = '/login/'
