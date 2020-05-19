@@ -18,7 +18,7 @@ class miembro (ClaseModelo):
     eps = models.ForeignKey(Eps, on_delete=False)
     barrio = models.ForeignKey(Barrio, on_delete=False)
     tipo_sangre = models.ForeignKey(Tipo_Sangre, on_delete=False)
-    cede = models.ForeignKey(Cede, on_delete=False)
+    sede = models.ForeignKey(Sede, on_delete=False)
     rol_miembro = models.ForeignKey(Rol_Miembro, on_delete=False)
 
     class Meta:
