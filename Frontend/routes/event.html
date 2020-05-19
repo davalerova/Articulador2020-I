@@ -3,9 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear evento</title>
+    <title>Crear actividad</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="../img/Rama.png" style="width: 60px; height: 40px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Miembros</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Actividades</a>
+              </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="#">Organigrama</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="#">Capítulos técnicos</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="#">Hoja de vida</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="#">Beneficios</a>
+            </li>
+  
+            <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+            </li>
+
+            <li class="nav-item">
+            <a  class="nav-link" href="../routes/login.html"> Iniciar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <br>
+
+    <div class="container" align="center">
+        <h1>Crear Actividad</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post">
+                        <fieldset>
+
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                <select id="TypeActivity" name="TypeA" type="text" class="form-control">
+                                    <option value="">Tipo actividad</option> 
+                                    <option value="">--------------------------------------------------------------------------------------------------------------------</option> 
+                                    <option value="Programación">Programación</option> 
+                                    <option value="Robotíca">Robotíca</option>
+                                    <option value="Charla">Charla</option>
+                                 </select>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <input id="name" name="nameA" type="text" placeholder="Nombre actividad" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <input id="description" name="descriptionA" type="text" placeholder="Descripción" class="form-control">
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <input id="dateActivity" name="dateA" type="text" placeholder="Fecha de actividad" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                <select id="member" name="memberA" type="text" class="form-control">
+                                    <option value="">Para miembros</option> 
+                                    <option value="">--------------------------------------------------------------------------------------------------------------------</option> 
+                                    <option value="Masculino">Con membresía</option> 
+                                    <option value="Femenino">Colaboradores</option>
+                                    <option value="Otro">Todos</option>
+                                 </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                <select id="status" name="statusA" type="text" class="form-control">
+                                    <option value="">Estado</option> 
+                                    <option value="">--------------------------------------------------------------------------------------------------------------------</option> 
+                                    <option value="Masculino">Activo</option> 
+                                    <option value="Femenino">Inactivo</option>
+                                    <option value="Otro">Aplazado</option>
+                                 </select>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <input id="dateCreation" name="dateC" type="text" placeholder="Fecha de creación" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <input id="dateUpdate" name="dateU" type="text" placeholder="Fecha de modificación" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                <select id="userCreate" name="userC" type="text" class="form-control">
+                                    <option value="">Usuario creador</option> 
+                                    <option value="">--------------------------------------------------------------------------------------------------------------------</option> 
+                                    <option value="Masculino">ieee</option> 
+                                    <option value="Femenino">Yessica</option>
+                                    <option value="Otro">Lista de usuarios</option>
+                                 </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                <select id="userupdate" name="userU" type="text" class="form-control">
+                                    <option value="">Usuario Modificador</option> 
+                                    <option value="">--------------------------------------------------------------------------------------------------------------------</option> 
+                                    <option value="Masculino">iee</option> 
+                                    <option value="Femenino">Yessica</option>
+                                    <option value="Otro">Lista de usuarios</option>
+                                 </select>
+                                </div>
+                            </div>
+                            
+    
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Crear actividad</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="fixed-bottom bg-light">
+        <a href="https://www.instagram.com/ieee_etitc/"  target="_blank" ><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/IEEE.ETITC"  target="_blank" ><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/ieee_etitc" target="_blank" ><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" ><i class="fab fa-github"></i></a>
+      <p>© copyright 2020</p>
+    </footer>
+
     
 </body>
 </html>
