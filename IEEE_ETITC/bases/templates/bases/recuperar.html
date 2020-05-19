@@ -33,19 +33,16 @@
                         {% endif %}
                     </small>
                   </div>
-                  <form class="user" method="POST">
+                  <form class="emailHelp" method="POST">
                     {% csrf_token %}
                     <div class="form-group">
                       <input type="email" class="form-control form-control-user" id="id_username" name="username" aria-describedby="emailHelp" placeholder="Correo electrónico">
                     </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="id_password" name="password" placeholder="Contraseña">
-                    </div>
+                    
 
                     {# { form.as_p } #}
 
                     <button type="submit" class="btn btn-primary btn-user btn-block">Iniciar sesión</button>
-                    <a  class="nav-link btn " href="{% url 'bases:recuperar' %}">Olvidé mi contraseña</a>
                 </div>
               </div>
 

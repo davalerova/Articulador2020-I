@@ -1,16 +1,17 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IEEE-ETITC</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
+    <link rel="icon" href="https://serv2.raiolanetworks.es/favicon-navegadores.png" sizes="32x32" type="image/png">
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="media/Rama.png" style="width: 60px; height: 40px;">
+        <img src="{% static 'base/img/Rama.png' %}" style="width: 60px; height: 40px;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,8 +51,21 @@
             <a class="nav-link" href="#">{% block contacto %}Contacto{% endblock %}</a>
             </li>
 
-            <li class="nav-item">
-            <a  class="nav-link btn btn-secondary" href="{% url 'bases:login' %}">Iniciar sesión</a>
+            
+            
+
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://127.0.0.1:8000/admin/logout/" role="button" aria-haspopup="true" aria-expanded="false">{% block usuario %}<strong>{{ user.username.title|lower }}</strong></a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/admin/auth/user/1/change/">Editar</a>
+                  <a class="dropdown-item" href="{% url 'bases:logout' %}">Salir</a>
+                </div>
+              </li>
+                {% endblock %}</a>  
+              {% else %}
+              <a  class="nav-link btn btn-secondary" href="{% url 'bases:login' %}">Iniciar sesión</a>
+              {% endif %}
             </li>
           </ul>
         </div>
@@ -77,6 +91,34 @@
         
       <div class="text-center">© Todos los derechos reservados. 2020 Rama Estudiantil IEEE-ETITC</div>
     </footer>
+
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión
+                    actual.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="{% url 'bases:logout' %}">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" id="popup"></div>
+
+
 <!-- Footer -->
       <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -24,4 +24,9 @@ urlpatterns = [
     path( '', Home.as_view(), name='home' ),
     path('login/',auth_views.LoginView.as_view(template_name='bases/login.html'),
         name='login'),
+    path('recuperar/',auth_views.LoginView.as_view(template_name='bases/recuperar.html'),
+    name='recuperar'),
+    path( 'logout/',
+        auth_views.LogoutView.as_view( template_name='bases/home.html' ),
+        name='logout' ),
 ]
