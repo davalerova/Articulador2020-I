@@ -7,7 +7,7 @@ class miembro (ClaseModelo):
                               help_text='Nombre del usuario',
                               unique=False,
                               verbose_name='Nombre')
-    apellido = nombre = models.CharField(max_length=45,
+    apellido = models.CharField(max_length=45,
                                          help_text='Digite ',
                                          unique=False,
                                          verbose_name='Apellidos')
